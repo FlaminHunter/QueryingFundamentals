@@ -8,7 +8,7 @@ Understand what you are looking for. This is important. If you're in a SOC envir
 # Example 1 with Remote Logon
 Here's an example to look at. On 12/15/2024 a threat actor remoted in from a random IP address. What are the logs I need to pull up regarding that event? 
 
-For one, I have to set my SIEM timeline to look between for 12/15/2024 and 12/16/2025. I am immediately thinking about windows security logs for successful logon.. and Remote Desktop Protocol. You can easily look it up on google if you don't remember. 
+For one, I have to set my SIEM timeline to look between for 12/15/2024 and 12/16/2024. I am immediately thinking about windows security logs for successful logon.. and Remote Desktop Protocol. You can easily look it up on google if you don't remember. 
 
 Here's a splunk query since it's fairly common
 index=* source="xmlwineventlog:microsoft-windows-security" EventCode=4624 earliest=12/15/2024:00:00:00 latest=12/16/2024:00:00:00
