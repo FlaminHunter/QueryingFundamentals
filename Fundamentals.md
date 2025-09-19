@@ -12,7 +12,7 @@ For one, I have to set my SIEM timeline to look between for 12/15/2024 and 12/16
 
 Here's a splunk query since it's fairly common
 index=* source="xmlwineventlog:microsoft-windows-security" EventCode=4624 earliest=12/15/2024:00:00:00 latest=12/16/2024:00:00:00
-(LogonType=3 or LogonType10) dest_port=3389
+(LogonType10) dest_port=3389
 | sort +_time
 | table _time EventCode user dest_port dest_ip
 # Explanation for Example 1
